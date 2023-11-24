@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import Image from "next/image";
 import Logo from "../images/logo.png";
 import "../globals.css";
 
 const WaitlistForum = ({ onClose }: any) => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(""); 
   const [walletAddress, setWalletAddress] = useState("");
   const [isShared, setIsShared] = useState(false);
 
@@ -16,8 +16,8 @@ const WaitlistForum = ({ onClose }: any) => {
     e.preventDefault();
 
     try {
-      // Update data to Firebase
-      await setDoc(doc(db, "waitlist"), {
+      // Add data to Firestore
+      await addDoc(collection(db, "waitlist"), {
         email,
         walletAddress,
       });
@@ -25,9 +25,10 @@ const WaitlistForum = ({ onClose }: any) => {
       // Set isShared to true
       setIsShared(true);
     } catch (error) {
-      console.error("Error updating data to Firebase:", error);
+      console.error("Error adding data to Firestore:", error);
     }
   };
+
 
   const handleTweet = () => {
     // Handle tweet functionality here
@@ -56,7 +57,7 @@ const WaitlistForum = ({ onClose }: any) => {
           type="text"
           value={walletAddress}
           onChange={(e) => setWalletAddress(e.target.value)}
-          placeholder="enter your wallet address optional "
+          placeholder="enter your wallet address "
           className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
         />
         <br />
