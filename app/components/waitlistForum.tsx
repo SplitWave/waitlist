@@ -34,13 +34,13 @@ const WaitlistForum = ({ onClose }: any) => {
   };
 
   return (
-    <div className="bg-[#181F1C] p-8 m-auto mt-[6.25rem] shadow-md md:w-[23.9375rem] md:h-[23.125rem] rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
+    <div className="bg-[#181F1C] p-8 m-auto mt-[6.25rem] shadow-md md:w-[23.9375rem] s:mx-[1.25rem] md:mx-[0rem] md:h-[23.125rem] rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
       <Image
         src={Logo}
         alt="logo"
         className=" md:w-[3.8125rem] md:h-[3.8125rem] m-auto "
       />
-      <h1 className=" text-center text-[1.25rem] text-white font-semibold mt-[1.625rem] ">
+      <h1 className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-semibold mt-[1.625rem] ">
         Join the waitlist
       </h1>
       <form onSubmit={handleSubmit} className=" px-[0.625rem] w-full ">
@@ -49,7 +49,7 @@ const WaitlistForum = ({ onClose }: any) => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="enter your email"
-          className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] text-[1rem] text-[#6B9984] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
+          className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B9984] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
         />
         <br />
         <input
@@ -57,13 +57,13 @@ const WaitlistForum = ({ onClose }: any) => {
           value={walletAddress}
           onChange={(e) => setWalletAddress(e.target.value)}
           placeholder="enter your wallet address optional "
-          className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
+          className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
         />
         <br />
-        <div className=" w-[8.0625rem] h-[2.375rem] m-auto bg-[#6B9984] text-white text-center text-[1rem] rounded-[1.5625rem] mt-[1rem] flex items-center justify-center ">
+        <div className=" w-[8.0625rem] h-[2.375rem] m-auto bg-[#6B9984] text-white text-center s:text-[0.875rem] md:text-[1rem] rounded-[1.5625rem] mt-[1rem] flex items-center justify-center ">
           <button type="submit">Submit</button>
         </div>
-        <h1 className=" text-[#6B9984] text-center text-[1rem] my-[0.625rem] ">
+        <h1 className=" text-[#6B9984] text-center s:text-[0.875rem] md:text-[1rem] my-[0.625rem] ">
           Have an invite code?
         </h1>
       </form>
