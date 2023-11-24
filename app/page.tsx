@@ -45,7 +45,11 @@ export default function Home() {
         <Image src={Background} alt="background" />
       </div>
 
-      <Modal open={isModalOpen} onClose={closeModal}>
+      <Modal
+        open={isModalOpen}
+        onClose={closeModal}
+        className=" md:w-[23.9375rem] h-[23.125rem] m-auto "
+      >
         <WaitlistForum onClose={closeModal} />
       </Modal>
     </div>

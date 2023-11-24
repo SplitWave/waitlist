@@ -34,7 +34,7 @@ const WaitlistForum = ({ onClose }: any) => {
   };
 
   return (
-    <div className="bg-[#181F1C] p-8 m-auto mt-[6.25rem] shadow-md md:w-[23.9375rem] s:mx-[1.25rem] md:mx-[0rem] md:h-[23.125rem] rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
+    <div className="bg-[#181F1C] p-8 mt-[3.125rem] m-auto shadow-md  rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
       <Image
         src={Logo}
         alt="logo"
