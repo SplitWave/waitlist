@@ -6,6 +6,8 @@ import { db } from "../lib/firebase";
 import Image from "next/image";
 import Logo from "../images/logo.png";
 import "../globals.css";
+import { TwitterShareButton } from "react-share";
+import { FaTwitter } from "react-icons/fa";
 
 const WaitlistForum = ({ onClose }: any) => {
   const [email, setEmail] = useState("");
@@ -81,8 +83,18 @@ const WaitlistForum = ({ onClose }: any) => {
 
       {isShared && (
         <div>
-          <p>Form successfully shared!</p>
-          <button onClick={handleTweet}>Tweet this</button>
+          <p className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-bold">
+            You are in
+          </p>
+          <TwitterShareButton
+            title="SplitWave app"
+            url="https://twitter.com/intent/tweet?text=I%20am%20in!!%20Join%20%40splitwave.app%20for%20better%20finance%20management%20on%20chain&hashtags=SplitWave&url=https%3A%2F%2Fsplitwave.app%2F"
+            onClick={handleTweet}
+            className=" w-full justify-center items-center text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row "
+          >
+            Tweet this
+            <FaTwitter size={30} className=" ml-[0.625rem] " />
+          </TwitterShareButton>
         </div>
       )}
     </div>
