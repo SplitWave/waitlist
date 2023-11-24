@@ -18,7 +18,6 @@ const NavBar: React.FC = () => {
           SplitWave
         </div>
       </div>
-
       <div className=" w-1/3 md:flex md:flex-row font-normal s:text-[1.25rem] md:text-[1.625rem] leading-[1.875rem] md:justify-evenly ">
         <div className=""> home</div>
         <div className=" md:ml-[0.625rem]  relative pb-[0.5rem] ">
@@ -28,21 +27,21 @@ const NavBar: React.FC = () => {
 
         <div className="flex space-x-4 text-[#6B9984] s:mt-[0.9375rem] md:mt-[0rem] md:ml-[1.25rem] ">
           <a
-            href="https://twitter.com/your_twitter_handle"
+            href="https://twitter.com/splitwaveapp"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaTwitter size={30} />
           </a>
           <a
-            href="https://discord.gg/your_discord_invite"
+            href="https://discord.gg/2G9XftNgTN"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaDiscord size={30} />
           </a>
           <a
-            href="https://t.me/your_telegram_channel"
+            href="https://t.me/splitwave"
             target="_blank"
             rel="noopener noreferrer"
           >

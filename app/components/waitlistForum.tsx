@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import Image from "next/image";
 import Logo from "../images/logo.png";
@@ -16,8 +16,8 @@ const WaitlistForum = ({ onClose }: any) => {
     e.preventDefault();
 
     try {
-      // Update data to Firebase
-      await setDoc(doc(db, "waitlist"), {
+      // Add data to Firestore
+      await addDoc(collection(db, "waitlist"), {
         email,
         walletAddress,
       });
@@ -25,7 +25,7 @@ const WaitlistForum = ({ onClose }: any) => {
       // Set isShared to true
       setIsShared(true);
     } catch (error) {
-      console.error("Error updating data to Firebase:", error);
+      console.error("Error adding data to Firestore:", error);
     }
   };
 
