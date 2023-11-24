@@ -10,17 +10,28 @@ import "../globals.css";
 const WaitlistForum = ({ onClose }: any) => {
   const [email, setEmail] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
-  const [isShared, setIsShared] = useState(false);
+  const [isShared, setIsShared] = useState(true);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
+      const docRef = doc(db, "waitlist", email);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        console.log("Email already registered");
+        alert("Email already registered");
+      } else {
+        //console.log("");
+        await setDoc(docRef, { email, walletAddress });
+      }
+      console.log("Waitlisted successfully");
+      alert("Waitlisted successfully");
       // Add data to Firestore
-      await addDoc(collection(db, "waitlist"), {
-        email,
-        walletAddress,
-      });
+      // await addDoc(collection(db, "waitlist"), {
+      //   email,
+      //   walletAddress,
+      // });
 
       // Set isShared to true
       setIsShared(true);
