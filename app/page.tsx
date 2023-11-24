@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import React from 'react';
+
 import NavBar from './components/navBar'
 import BackDrop from './images/mobile.png'
 import WaitlistForum from './components/waitlistForum'
