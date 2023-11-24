@@ -10,7 +10,7 @@ import "../globals.css";
 const WaitlistForum = ({ onClose }: any) => {
   const [email, setEmail] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
-  const [isShared, setIsShared] = useState(true);
+  const [isShared, setIsShared] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
