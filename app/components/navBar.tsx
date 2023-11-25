@@ -17,9 +17,9 @@ const NavBar: React.FC = () => {
         </div>
       </div>
       <div className=" w-1/3 flex flex-row font-normal s:text-[1.25rem] md:text-[1.625rem] leading-[1.875rem] md:justify-evenly ">
-        <div className=" s:hidden md:flex "> home</div>
+        <div className=" s:hidden md:flex "> Home</div>
         <div className=" s:hidden md:flex md:ml-[0.625rem]  relative pb-[0.5rem] ">
-          join waitlist
+          Join waitlist
           <div className="absolute inset-x-0 bottom-0 h-1 rounded-[0.625rem] bg-gradient-to-r from-[#FFFFFF] via-[#6B9984] to-[#6B9984]"></div>
         </div>
 
