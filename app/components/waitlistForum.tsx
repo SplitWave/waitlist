@@ -99,7 +99,7 @@ const WaitlistForum = ({ onClose }: any) => {
               onClick={handleTweet}
               className=" s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row  "
             >
-              Share this tweet
+              Share this
               <FaTwitter size={25} className=" ml-[0.625rem] " />
             </TwitterShareButton>
           </div>
