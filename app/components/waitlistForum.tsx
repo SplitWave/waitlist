@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { doc, getDoc, setDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "../lib/firebase";
@@ -8,37 +7,44 @@ import "../globals.css";
 import { TwitterShareButton } from "react-share";
 import { FaTwitter } from "react-icons/fa";
 import logo from "../../public/images/logo.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const WaitlistForum = ({ onClose }: any) => {
   const [email, setEmail] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
-  const [isShared, setIsShared] = useState(false);
+  const [isShared, setIsShared] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    setIsLoading(true);
     try {
       const docRef = doc(db, "waitlist", email);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         console.log("Email already registered");
-        alert("Email already registered");
+        toast("Email already registered");
+        setIsLoading(false);
       } else {
         //console.log("");
         await setDoc(docRef, { email, walletAddress });
+        console.log("Waitlisted successfully");
+        toast("Waitlisted successfully");
+        // Set isShared to true
+        setIsShared(true);
+        setIsLoading(false);
       }
-      console.log("Waitlisted successfully");
-      alert("Waitlisted successfully");
+
       // Add data to Firestore
       // await addDoc(collection(db, "waitlist"), {
       //   email,
       //   walletAddress,
       // });
-
-      // Set isShared to true
-      setIsShared(true);
     } catch (error) {
       console.error("Error adding data to Firestore:", error);
+      setIsLoading(false);
+      toast("Pls try again!!");
     }
   };
 
@@ -75,7 +81,9 @@ const WaitlistForum = ({ onClose }: any) => {
             />
             <br />
             <div className=" w-[8.0625rem] h-[2.375rem] m-auto bg-[#6B9984] text-white text-center s:text-[0.875rem] md:text-[1rem] rounded-[1.5625rem] mt-[1rem] flex items-center justify-center ">
-              <button type="submit">Submit</button>
+              <button type="submit">
+                {isLoading ? "Loading..." : "Submit"}
+              </button>
             </div>
             <h1 className=" text-[#6B9984] text-center s:text-[0.875rem] md:text-[1rem] my-[0.625rem] ">
               Have an invite code?
@@ -105,6 +113,7 @@ const WaitlistForum = ({ onClose }: any) => {
           </div>
         </div>
       )}
+      <ToastContainer />
     </div>
   );
 };

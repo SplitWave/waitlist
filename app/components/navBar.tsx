@@ -7,7 +7,7 @@ import { FaTwitter, FaDiscord, FaTelegramPlane } from "react-icons/fa";
 
 const NavBar: React.FC = () => {
   return (
-    <nav className="w-full s:px-[0.9375rem] pt-[0.9375rem] md:px-[2.5rem]  flex flex-row items-center justify-between ">
+    <nav className="w-full s:px-[0.9375rem] pt-[1.25rem] md:px-[2.5rem]  flex flex-row items-center justify-between ">
       <div className=" md:w-[16rem] flex flex-row items-center ">
         <div className=" s:w-[1.875rem] s:h-[1.875rem] md:w-[3.5625rem] md:h-[3.5625rem] relative ">
           <Image src={logo} alt="logo" fill />
