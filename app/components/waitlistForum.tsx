@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { doc, getDoc, setDoc, addDoc, collection } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import Image from "next/image";
-import Logo from "../images/logo.png";
 import "../globals.css";
 import { TwitterShareButton } from "react-share";
 import { FaTwitter } from "react-icons/fa";
+import logo from "../../public/images/logo.png";
 
 const WaitlistForum = ({ onClose }: any) => {
   const [email, setEmail] = useState("");
@@ -48,53 +48,61 @@ const WaitlistForum = ({ onClose }: any) => {
 
   return (
     <div className="bg-[#181F1C] p-8 mt-[3.125rem] m-auto shadow-md  rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
-      <Image
-        src={Logo}
-        alt="logo"
-        className=" md:w-[3.8125rem] md:h-[3.8125rem] m-auto "
-      />
-      <h1 className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-semibold mt-[1.625rem] ">
-        Join the waitlist
-      </h1>
-      <form onSubmit={handleSubmit} className=" px-[0.625rem] w-full ">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="enter your email"
-          className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B9984] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
-        />
-        <br />
-        <input
-          type="text"
-          value={walletAddress}
-          onChange={(e) => setWalletAddress(e.target.value)}
-          placeholder="enter your wallet address optional "
-          className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
-        />
-        <br />
-        <div className=" w-[8.0625rem] h-[2.375rem] m-auto bg-[#6B9984] text-white text-center s:text-[0.875rem] md:text-[1rem] rounded-[1.5625rem] mt-[1rem] flex items-center justify-center ">
-          <button type="submit">Submit</button>
-        </div>
-        <h1 className=" text-[#6B9984] text-center s:text-[0.875rem] md:text-[1rem] my-[0.625rem] ">
-          Have an invite code?
-        </h1>
-      </form>
+      <div className=" md:w-[3.8125rem] md:h-[3.8125rem] m-auto relative ">
+        <Image src={logo} alt="logo" fill />
+      </div>
+
+      {!isShared && (
+        <>
+          <h1 className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-semibold mt-[1.625rem] ">
+            Join the waitlist
+          </h1>
+          <form onSubmit={handleSubmit} className=" px-[0.625rem] w-full ">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="enter your email"
+              className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B9984] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
+            />
+            <br />
+            <input
+              type="text"
+              value={walletAddress}
+              onChange={(e) => setWalletAddress(e.target.value)}
+              placeholder="enter your wallet address optional "
+              className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
+            />
+            <br />
+            <div className=" w-[8.0625rem] h-[2.375rem] m-auto bg-[#6B9984] text-white text-center s:text-[0.875rem] md:text-[1rem] rounded-[1.5625rem] mt-[1rem] flex items-center justify-center ">
+              <button type="submit">Submit</button>
+            </div>
+            <h1 className=" text-[#6B9984] text-center s:text-[0.875rem] md:text-[1rem] my-[0.625rem] ">
+              Have an invite code?
+            </h1>
+          </form>
+        </>
+      )}
 
       {isShared && (
         <div>
-          <p className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-bold">
-            You are in
+          <p className=" text-center mt-[0.9375rem] s:text-[1.125rem] md:text-[1.25rem] text-white font-bold">
+            You are in!
           </p>
-          <TwitterShareButton
-            title="SplitWave app"
-            url="https://twitter.com/intent/tweet?text=I%20am%20in!!%20Join%20%40splitwave.app%20for%20better%20finance%20management%20on%20chain&hashtags=SplitWave&url=https%3A%2F%2Fsplitwave.app%2F"
-            onClick={handleTweet}
-            className=" w-full justify-center items-center text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row "
-          >
-            Tweet this
-            <FaTwitter size={30} className=" ml-[0.625rem] " />
-          </TwitterShareButton>
+          <h1 className=" md:w-[15.625rem] mt-[0.9375rem] m-auto s:text-[0.875rem] md:text-[1rem] text-[#6B9984] text-center ">
+            We will email you the invite code when the app is live.
+          </h1>
+          <div className=" w-[12.5rem] h-[3.125rem] m-auto flex justify-center items-center bg-[#6B9984] rounded-[1.25rem] mt-[0.9375rem] ">
+            <TwitterShareButton
+              title="SplitWave app"
+              url="https://twitter.com/intent/tweet?text=I%20am%20in!!%20Join%20%40splitwave.app%20for%20better%20finance%20management%20on%20chain&hashtags=SplitWave&url=https%3A%2F%2Fsplitwave.app%2F"
+              onClick={handleTweet}
+              className=" s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row  "
+            >
+              Share this tweet
+              <FaTwitter size={25} className=" ml-[0.625rem] " />
+            </TwitterShareButton>
+          </div>
         </div>
       )}
     </div>

@@ -3,9 +3,9 @@ import Image from "next/image";
 //import styles from "./page.module.css";
 import React, { useState } from "react";
 import NavBar from "./components/navBar";
-import Background from "./images/background.png";
 import WaitlistForum from "./components/waitlistForum";
 import Modal from "@mui/material/Modal";
+import background from "../public/images/background.png";
 
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
@@ -18,7 +18,7 @@ export default function Home() {
     setModalOpen(false);
   };
   return (
-    <div className="w-full h-[59.375rem] relative ">
+    <div className="w-full h-[59.375rem] relative  text-white">
       <NavBar />
       <div className=""></div>
       <h1 className=" bg-clip-text font-semibold s:text-[3.75rem] md:text-[8rem] text-center mt-[3.75rem] text-transparent bg-gradient-to-t from-[#FFFFFF]  to-[#6B9984] ">
@@ -33,7 +33,7 @@ export default function Home() {
         app.
       </p>
       <div
-        className=" mt-[3.75rem] relative z-10 m-auto flex bg-[#6B9984]  text-white s:text-[1.125rem] md:text-[1.625rem] font-normal s:w-[9.375rem] md:w-[13.5rem] s:h-[2.5rem] md:h-[3.9375rem] items-center justify-center rounded-[1.125rem]  "
+        className=" mt-[2.5rem] relative z-10 m-auto flex bg-[#6B9984]  text-white s:text-[1.125rem] md:text-[1.625rem] font-normal s:w-[9.375rem] md:w-[13.5rem] s:h-[2.5rem] md:h-[3.9375rem] items-center justify-center rounded-[1.125rem]  "
         onClick={openModal}
       >
         <h1>Join Waitlist</h1>
@@ -41,8 +41,10 @@ export default function Home() {
       {/* <div className=" absolute  z-0 top-[12.5rem] w-[76.625rem] h-[38.0625rem]   ">
         <Image src={Background} alt="background" />
       </div> */}
-      <div className="absolute top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 z-0 s:w-full s:h-[25rem] md:w-[76.625rem] md:h-[38.0625rem]">
-        <Image src={Background} alt="background" />
+      <div className="absolute top-2/3 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 z-0 s:w-full s:h-[25rem] md:w-[76.625rem] md:h-[38.0625rem]">
+        <div className=" w-full h-full relative ">
+          <Image src={background} alt="background" fill />
+        </div>
       </div>
 
       <Modal
