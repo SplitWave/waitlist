@@ -5,8 +5,9 @@ import "./globals.css";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SplitWave - Waitlist",
-  description: "",
+  title: "SplitWave",
+  description: "Ditch the finance chaos! SplitWave on Solana brings fun to your money — seamless payments, bill splits, and expense tracking. Join the waitlist for on-chain finance, but cooler! 🚀💸",
+
 };
 
 export default function RootLayout({

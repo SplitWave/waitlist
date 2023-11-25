@@ -59,12 +59,15 @@ const WaitlistForum = ({ onClose }: any) => {
           <h1 className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-semibold mt-[1.625rem] ">
             Join the waitlist
           </h1>
+          <p className=" text-center mt-[0.9375rem] s:text-[0.875rem] md:text-[1rem] text-white font-normal ">
+          We know you can't wait to ride the wave. Follow us on our social media platforms and fill in your correct details
+          </p>
           <form onSubmit={handleSubmit} className=" px-[0.625rem] w-full ">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="enter your email"
+              placeholder="Enter your email"
               className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B9984] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
             />
             <br />
@@ -72,7 +75,7 @@ const WaitlistForum = ({ onClose }: any) => {
               type="text"
               value={walletAddress}
               onChange={(e) => setWalletAddress(e.target.value)}
-              placeholder="enter your wallet address (optional) "
+              placeholder="Enter your SOL address (optional) "
               className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
             />
             <br />
@@ -91,15 +94,16 @@ const WaitlistForum = ({ onClose }: any) => {
       {isShared && (
         <div>
           <p className=" text-center mt-[0.9375rem] s:text-[1.125rem] md:text-[1.25rem] text-white font-bold">
-            You are in!
+            You are in! 🎉
           </p>
           <h1 className=" md:w-[15.625rem] mt-[0.9375rem] m-auto s:text-[0.875rem] md:text-[1rem] text-[#6B9984] text-center ">
             We will email you the invite code when the app is live.
           </h1>
           <div className=" w-[12.5rem] h-[3.125rem] m-auto flex justify-center items-center bg-[#6B9984] rounded-[1.25rem] mt-[0.9375rem] ">
             <TwitterShareButton
-              title="I am in @splitwaveapp"
-              url="https://splitwave.app"
+              title="Ready to level up your finance game on Solana? I just joined the @splitwaveapp waitlist! 🚀🌊
+               Don't miss the wave - join me now!!"
+              url="splitwave.app"
               className=" s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row  "
             >
               Share this
