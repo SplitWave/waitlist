@@ -30,7 +30,7 @@ const WaitlistForum = ({ onClose }: any) => {
         //console.log("");
         await setDoc(docRef, { email, walletAddress });
         console.log("Waitlisted successfully");
-        toast("Waitlisted successfully");
+        toast("Waitlisted successfully 🎉");
         // Set isShared to true
         setIsShared(true);
         setIsLoading(false);
@@ -46,10 +46,6 @@ const WaitlistForum = ({ onClose }: any) => {
       setIsLoading(false);
       toast("Pls try again!!");
     }
-  };
-
-  const handleTweet = () => {
-    // Handle tweet functionality here
   };
 
   return (
@@ -76,7 +72,7 @@ const WaitlistForum = ({ onClose }: any) => {
               type="text"
               value={walletAddress}
               onChange={(e) => setWalletAddress(e.target.value)}
-              placeholder="enter your wallet address optional "
+              placeholder="enter your wallet address (optional) "
               className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
             />
             <br />
@@ -102,9 +98,8 @@ const WaitlistForum = ({ onClose }: any) => {
           </h1>
           <div className=" w-[12.5rem] h-[3.125rem] m-auto flex justify-center items-center bg-[#6B9984] rounded-[1.25rem] mt-[0.9375rem] ">
             <TwitterShareButton
-              title="SplitWave app"
-              url="https://twitter.com/intent/tweet?text=I%20am%20in!!%20Join%20%40splitwave.app%20for%20better%20finance%20management%20on%20chain&hashtags=SplitWave&url=https%3A%2F%2Fsplitwave.app%2F"
-              onClick={handleTweet}
+              title="I am in @splitwaveapp"
+              url="https://splitwave.app"
               className=" s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row  "
             >
               Share this
