@@ -30,7 +30,7 @@ const WaitlistForum = () => {
         //console.log("");
         await setDoc(docRef, { email, walletAddress });
         console.log("Waitlisted successfully");
-        toast("Waitlisted successfully");
+        toast("Waitlisted successfully 🎉");
         // Set isShared to true
         setIsShared(true);
         setIsLoading(false);
@@ -48,10 +48,6 @@ const WaitlistForum = () => {
     }
   };
 
-  const handleTweet = () => {
-    // Handle tweet functionality here
-  };
-
   return (
     <div className="bg-[#181F1C] p-8  m-auto shadow-md  rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
       <div className=" md:w-[3.8125rem] md:h-[3.8125rem] m-auto relative ">
@@ -63,12 +59,13 @@ const WaitlistForum = () => {
           <h1 className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-semibold mt-[1.625rem] ">
             Join the waitlist
           </h1>
+        
           <form onSubmit={handleSubmit} className=" px-[0.625rem] w-full ">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="enter your email"
+              placeholder="Enter your email"
               className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B9984] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
             />
             <br />
@@ -76,7 +73,7 @@ const WaitlistForum = () => {
               type="text"
               value={walletAddress}
               onChange={(e) => setWalletAddress(e.target.value)}
-              placeholder="enter your wallet address optional "
+              placeholder="Enter your SOL address (optional) "
               className=" w-full mt-[1rem] h-[2.5rem] px-[0.625rem] s:text-[0.875rem] md:text-[1rem] text-[#6B99862B] rounded-[1.0625rem] bg-[#24332C] border-[#6B9984] border-[0.0625rem] "
             />
             <br />
@@ -99,16 +96,16 @@ const WaitlistForum = () => {
       {isShared && (
         <div>
           <p className=" text-center mt-[0.9375rem] s:text-[1.125rem] md:text-[1.25rem] text-white font-bold">
-            You are in!
+            You are in! 🎉
           </p>
           <h1 className=" md:w-[15.625rem] mt-[0.9375rem] m-auto s:text-[0.875rem] md:text-[1rem] text-[#6B9984] text-center ">
             We will email you the invite code when the app is live.
           </h1>
           <div className=" w-[12.5rem] h-[3.125rem] m-auto flex justify-center items-center bg-[#6B9984] rounded-[1.25rem] mt-[0.9375rem] ">
             <TwitterShareButton
-              title="SplitWave app"
-              url="https://twitter.com/intent/tweet?text=I%20am%20in!!%20Join%20%40splitwave.app%20for%20better%20finance%20management%20on%20chain&hashtags=SplitWave&url=https%3A%2F%2Fsplitwave.app%2F"
-              onClick={handleTweet}
+              title="Ready to level up your finance game on Solana? I just joined the @splitwaveapp waitlist! 🚀🌊
+               Don't miss the wave - join me now!!"
+              url="splitwave.app"
               className=" s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row  "
             >
               Share this
