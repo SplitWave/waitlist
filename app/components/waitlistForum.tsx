@@ -10,7 +10,7 @@ import logo from "../../public/images/logo.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const WaitlistForum = ({ onClose }: any) => {
+const WaitlistForum = () => {
   const [email, setEmail] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
   const [isShared, setIsShared] = useState<boolean>(false);
@@ -53,7 +53,7 @@ const WaitlistForum = ({ onClose }: any) => {
   };
 
   return (
-    <div className="bg-[#181F1C] p-8 mt-[3.125rem] m-auto shadow-md  rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
+    <div className="bg-[#181F1C] p-8  m-auto shadow-md  rounded-[2.125rem] border-[0.0625rem] border-white custom-box-shadow ">
       <div className=" md:w-[3.8125rem] md:h-[3.8125rem] m-auto relative ">
         <Image src={logo} alt="logo" fill />
       </div>
@@ -85,6 +85,10 @@ const WaitlistForum = ({ onClose }: any) => {
                 {isLoading ? "Loading..." : "Submit"}
               </button>
             </div>
+            <p className=" text-center mt-[0.9375rem] s:text-[0.875rem] md:text-[1rem] text-white font-normal ">
+              We know you can&#39;t wait to ride the wave. Follow us on our
+              social media platforms and fill in your correct details
+            </p>
             <h1 className=" text-[#6B9984] text-center s:text-[0.875rem] md:text-[1rem] my-[0.625rem] ">
               Have an invite code?
             </h1>

@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
           <div className="absolute inset-x-0 bottom-0 h-1 rounded-[0.625rem] bg-gradient-to-r from-[#FFFFFF] via-[#6B9984] to-[#6B9984]"></div>
         </div>
 
-        <div className="flex space-x-4 text-[#6B9984] md:ml-[1.25rem] ">
+        <div className="flex space-x-4 text-[#6B9984] md:ml-[1.25rem] s:mr-[0.625rem] md:mr-[0rem] ">
           <a
             href="https://twitter.com/splitwaveapp"
             target="_blank"

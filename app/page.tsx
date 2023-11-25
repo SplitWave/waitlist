@@ -33,7 +33,7 @@ export default function Home() {
         app.
       </p>
       <div
-        className=" mt-[2.5rem] relative z-10 m-auto flex bg-[#6B9984]  text-white s:text-[1.125rem] md:text-[1.625rem] font-normal s:w-[9.375rem] md:w-[13.5rem] s:h-[2.5rem] md:h-[3.9375rem] items-center justify-center rounded-[1.125rem]  "
+        className=" mt-[3.75rem] relative z-10 m-auto flex bg-[#6B9984]  text-white s:text-[1.125rem] md:text-[1.625rem] font-normal s:w-[9.375rem] md:w-[13.5rem] s:h-[2.5rem] md:h-[3.9375rem] items-center justify-center rounded-[1.125rem]  "
         onClick={openModal}
       >
         <h1>Join Waitlist</h1>
@@ -41,10 +41,8 @@ export default function Home() {
       {/* <div className=" absolute  z-0 top-[12.5rem] w-[76.625rem] h-[38.0625rem]   ">
         <Image src={Background} alt="background" />
       </div> */}
-      <div className="absolute top-2/3 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 z-0 s:w-full s:h-[25rem] md:w-[76.625rem] md:h-[38.0625rem]">
-        <div className=" w-full h-full relative ">
-          <Image src={background} alt="background" fill />
-        </div>
+      <div className="absolute md:mt-[5.625rem] s:top-1/3 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 z-0 s:w-full s:h-[25rem] md:w-[76.625rem] md:h-[38.0625rem]">
+        <Image src={background} alt="background" className=" w-full h-full " />
       </div>
 
       <Modal
@@ -52,7 +50,7 @@ export default function Home() {
         onClose={closeModal}
         className=" md:w-[23.9375rem] h-[23.125rem] m-auto "
       >
-        <WaitlistForum onClose={closeModal} />
+        <WaitlistForum />
       </Modal>
     </div>
   );
