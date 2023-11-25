@@ -59,9 +59,7 @@ const WaitlistForum = ({ onClose }: any) => {
           <h1 className=" text-center s:text-[1.125rem] md:text-[1.25rem] text-white font-semibold mt-[1.625rem] ">
             Join the waitlist
           </h1>
-          <p className=" text-center mt-[0.9375rem] s:text-[0.875rem] md:text-[1rem] text-white font-normal ">
-          We know you can't wait to ride the wave. Follow us on our social media platforms and fill in your correct details
-          </p>
+        
           <form onSubmit={handleSubmit} className=" px-[0.625rem] w-full ">
             <input
               type="email"
