@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 
+
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

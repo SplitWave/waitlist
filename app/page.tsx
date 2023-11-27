@@ -6,6 +6,7 @@ import NavBar from "./components/navBar";
 import WaitlistForum from "./components/waitlistForum";
 import Modal from "@mui/material/Modal";
 import background from "../public/images/background.png";
+import Head from "next/head";
 
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
@@ -18,6 +19,15 @@ export default function Home() {
     setModalOpen(false);
   };
   return (
+    <>
+    <Head>
+      <meta property="og:title" content="SplitWave" />
+      <meta
+        property="og:description"
+        content="Ditch the finance chaos! SplitWave on Solana brings fun to your money — seamless payments, bill splits, and expense tracking. Join the waitlist for on-chain finance, but cooler! 🚀💸"
+      />
+      <meta property="og:image" content="../public/images/metadata.png" />
+    </Head>
     <div className="w-full s:h-[56.25rem] md:h-[68.75rem] relative  text-white">
       <NavBar />
       <div className=""></div>
@@ -51,5 +61,6 @@ export default function Home() {
         <WaitlistForum />
       </Modal>
     </div>
+    </>
   );
 }
