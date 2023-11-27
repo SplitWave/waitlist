@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Ditch the finance chaos! SplitWave on Solana brings fun to your money — seamless payments, bill splits, and expense tracking. Join the waitlist for on-chain finance, but cooler! 🚀💸",
     openGraph: {
-      images: '../public/images/metadata.png',
+      images: './metadata.png',
     },
   };
 

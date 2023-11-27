@@ -26,7 +26,7 @@ export default function Home() {
         property="og:description"
         content="Ditch the finance chaos! SplitWave on Solana brings fun to your money — seamless payments, bill splits, and expense tracking. Join the waitlist for on-chain finance, but cooler! 🚀💸"
       />
-      <meta property="og:image" content="../public/images/metadata.png" />
+      <meta property="og:image" content="./metadata.png" />
     </Head>
     <div className="w-full s:h-[56.25rem] md:h-[68.75rem] relative  text-white">
       <NavBar />
