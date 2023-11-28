@@ -105,7 +105,7 @@ const WaitlistForum = () => {
             <TwitterShareButton
               title="Ready to level up your finance game on Solana? I just joined the @splitwaveapp waitlist! 🚀🌊
                Don't miss the wave - join me now!!"
-              url="splitwave.app"
+              url="https://splitwave.app/"
               className=" s:text-[1.125rem] md:text-[1.25rem] text-white font-bold flex flex-row  "
             >
               Share this
