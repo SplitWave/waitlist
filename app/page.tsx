@@ -33,7 +33,7 @@ export default function Home() {
       </Head>
       <div className="w-full md:h-[75rem] s:h-[56.25rem] bg-[#0E1210]  text-white">
         <NavBar />
-        <h1 className=" bg-clip-text font-semibold s:text-[2.8125rem] md:text-[8rem] text-center mt-[3.75rem] text-transparent bg-gradient-to-t from-[#FFFFFF]  to-[#6B9984] ">
+        <h1 className=" bg-clip-text font-semibold s:text-[2.5rem] md:text-[8rem] text-center mt-[3.75rem] text-transparent bg-gradient-to-t from-[#FFFFFF]  to-[#6B9984] ">
           SplitWave
         </h1>
         <p className=" lg:w-[66.5rem] md:w-full s:w-full m-auto mt-[1.25rem] s:px-[0.625rem] md:px-[0rem] s:text-[1rem] md:text-[1.5rem] font-normal text-center leading-[1.75rem] ">
@@ -50,7 +50,7 @@ export default function Home() {
         >
           <h1>Join Waitlist</h1>
         </div>
-        <div className=" w-3/4 h-auto m-auto s:mt-5 ">
+        <div className=" md:w-3/4 h-auto m-auto s:mt-5 ">
           <Image
             src={background}
             alt="background"

@@ -9,10 +9,10 @@ const NavBar: React.FC = () => {
   return (
     <nav className="w-full s:px-[0.9375rem] pt-[1.25rem] md:px-[2.5rem]  flex flex-row items-center justify-between ">
       <div className=" md:w-[16rem] flex flex-row items-center ">
-        <div className=" s:w-[1.875rem] s:h-[1.875rem] md:w-[3.5625rem] md:h-[3.5625rem] relative ">
+        <div className=" s:w-[1.75rem] s:h-[1.75rem] md:w-[3.5625rem] md:h-[3.5625rem] relative ">
           <Image src={logo} alt="logo" fill />
         </div>
-        <div className=" font-semibold s:text-[1.5rem] md:text-[2.5rem] ml-[0.625rem] leading-[2.9375rem] ">
+        <div className=" font-semibold s:text-[1.25rem] md:text-[2.5rem] ml-[0.625rem] leading-[2.9375rem] ">
           SplitWave
         </div>
       </div>
@@ -29,21 +29,21 @@ const NavBar: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter size={30} />
+            <FaTwitter className=" s:w-[1.5625rem] s:h-[1.5625rem] md:w-[1.875rem] md:h-[1.875rem] " />
           </a>
           <a
             href="https://discord.gg/2G9XftNgTN"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaDiscord size={30} />
+            <FaDiscord className=" s:w-[1.5625rem] s:h-[1.5625rem] md:w-[1.875rem] md:h-[1.875rem] " />
           </a>
           <a
             href="https://t.me/splitwave"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTelegramPlane size={30} />
+            <FaTelegramPlane className=" s:w-[1.5625rem] s:h-[1.5625rem] md:w-[1.875rem] md:h-[1.875rem] " />
           </a>
         </div>
       </div>
