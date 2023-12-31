@@ -37,12 +37,8 @@ export default function Home() {
           SplitWave
         </h1>
         <p className=" lg:w-[66.5rem] md:w-full s:w-full m-auto mt-[1.25rem] s:px-[0.625rem] md:px-[0rem] s:text-[1rem] md:text-[1.5rem] font-normal text-center leading-[1.75rem] ">
-          Your go-to Solana app for all things money! From seamless bill
-          splitting and payments to tracking expenses and analyzing spending
-          habits. Connect socially, share financial wisdom, and explore a world
-          of investments, making every financial move an adventure. Join the
-          waitlist now and be first in line to ride the SplitWave—where finance
-          meets fun! 🌊💰
+          Your go-to Solana app for all things money! Pay, budget, split and analyze your spending habits.
+          Ride the wave with us 🌊
         </p>
         <div
           className=" s:mt-[1.5625rem] md:mt-[60px] relative z-10 m-auto flex bg-[#6B9984]  text-white s:text-[1rem] md:text-[1.625rem] font-normal s:w-[9.375rem] md:w-[13.5rem] s:h-[2.5rem] md:h-[3.9375rem] items-center justify-center rounded-[1.125rem]  "

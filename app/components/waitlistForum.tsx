@@ -86,9 +86,7 @@ const WaitlistForum = () => {
               We know you can&#39;t wait to ride the wave. Follow us on our
               social media platforms and fill in your correct details
             </p>
-            <h1 className=" text-[#6B9984] text-center s:text-[0.875rem] md:text-[1rem] my-[0.625rem] ">
-              Have an invite code?
-            </h1>
+            
           </form>
         </>
       )}
